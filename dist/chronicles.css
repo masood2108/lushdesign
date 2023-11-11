@@ -1,0 +1,131 @@
+body {
+	font-family: "Fondamento", cursive;
+	background-color: rgb(235, 234, 231);
+	background-image: url("https://i.imgur.com/W9YCify.png");
+}
+
+.title {
+	font-size: 4.5em;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 40px;
+	padding-bottom: 10px;
+	border-bottom: 10px double black;
+}
+
+.date {
+	font: 1em "Roboto Mono", monospace;
+	text-align: center;
+	width: 280px;
+	margin: auto;
+	margin-top: 10px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.columns {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	margin-top: 10px;
+	border-top: 3px solid black;
+}
+
+.columns > div {
+	flex-grow: 0;
+	flex-basis: 20%;
+	text-align: center;
+	padding: 0 10px;
+}
+
+.columns div p {
+	font-family: "Roboto", sans-serif;
+	text-align: left;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+img {
+	width: 100%;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	image-rendering: pixelated;
+}
+
+.footer {
+	text-align: center;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	padding: 5px 0;
+	border-top: 3px double black;
+	border-bottom: 3px double black;
+}
+
+@media only screen and (max-width: 1024px) {
+	.columns {
+		flex-direction: column;
+	}
+
+	.columns > div {
+		padding: 0 10px;
+	}
+}
+#image-container {
+  width: 200px; /* Adjust the initial size as needed */
+  cursor: pointer;
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+#enlarge-image {
+  width: 100%;
+  height: auto;
+}
+
+#image-container:hover {
+  transform: scale(1.2); /* Adjust the scale factor for the enlarged image */
+}
+
+
+header {
+  background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background */
+  padding: 10px 0;
+}
+
+nav {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* Text color for links */
+  font-size: 1.2em; /* Adjust the font size as needed */
+  margin: 0 15px; /* Adjust the spacing between links */
+  transition: color 0.3s; /* Add a smooth color transition effect */
+}
+
+nav a:hover {
+  color: #FFD700; /* Change the text color on hover (e.g., to gold) */
+}
+.navigation-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navigation-buttons button {
+  background-color: #FFD700; /* Background color for buttons (e.g., gold) */
+  color: black; /* Text color for buttons */
+  font-size: 1.2em; /* Adjust the font size as needed */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  border: none;
+  cursor: pointer;
+  margin: 0 10px; /* Adjust the spacing between buttons */
+  transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.navigation-buttons button:hover {
+  background-color: black; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}

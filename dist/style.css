@@ -1,0 +1,510 @@
+@font-face {
+    font-family: Moderne Sans;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    background-size: cover;
+  }
+  
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+  
+  div#fashion {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: white;
+    transition: 0.4s;
+  }
+  
+  header:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+  
+  h1 {
+    font-family: Moderne Sans, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    letter-spacing: 0.5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1px;
+  }
+  
+  h2 {
+    font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+    font-size: 8vmin;
+    text-align: center;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    color: rgb(244, 237, 237);
+    font-weight: 100;
+  }
+  /* Adjustments for small screens */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 6vmin;
+      margin: 1rem;
+    }
+  }
+  
+  /* Additional adjustments for medium screens */
+  .workhrad 
+  h1{
+    color: #fff;
+    text-align: center;
+  }
+  body{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    height: 100%;
+  }
+  .workshop-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .workshop {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .workshop img {
+    max-width: 100%;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .workshop:hover {
+    transform: scale(1.05);
+  }
+
+  /* CSS for Workshop Header */
+  /* Basic button styles */
+.read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077B5; /* Change this to your desired button color */
+  color: #fff; /* Text color */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #005DA4; /* Change this to the hover color you prefer */
+}
+
+/* Center the button text horizontally and vertically */
+.read-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust the font size and other text properties */
+.read-more {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; /* Convert text to uppercase */
+}
+/* Add hover effect to the workshop images */
+.workshop img {
+  width: 100%; /* Set a fixed width to maintain consistency */
+  height: 200px; /* Set a fixed height to maintain consistency */
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
+  transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.workshop img:hover {
+  transform: scale(1.05); /* Scale up the image by 5% on hover */
+}
+/* Footer Styles */
+/* Footer Styles */
+/* Add this CSS to your style.css file */
+#navigation-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#prev-button, #next-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#content {
+  overflow: hidden;
+}
+.arrow-button {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Add a smooth hover effect */
+}
+
+.arrow-button:hover {
+  transform: scale(1.1);
+}
+/* Move the search input below the navbar */
+
+
+#workshop-search {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.more-workshops-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.more-workshops-button:hover {
+  background-color: #0056b3;
+}
+.section-separator {
+  border-top: 2px solid #ccc; /* Adjust the style and color as needed */
+  margin: 20px 0; /* Adjust the margin to control the spacing */
+}
+/* Style for the separator line */
+/* Style for the workshop info section */
+.workshop-info {
+  padding: 20px;
+  background-color: rgb(3, 0, 0); /* Background color for the info section */
+  border: 1px solid #ccc; /* Border around the info section */
+  border-radius: 5px;
+  margin: 20px 0; /* Add margin for spacing */
+  text-align: center;
+  color: rgb(248, 245, 245); /* Text color for the info section */
+}
+
+/* Style for the slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%; /* Adjust the width as needed */
+}
+
+/* Style for the individual slides */
+.mySlides {
+  display: none; /* Hide slides by default */
+}
+
+/* Style for images within slides */
+.mySlides img {
+  width: 100%; /* Ensure images fill the container */
+}
+
+/* Style for slideshow navigation (optional) */
+/* You can add navigation buttons if needed */
+
+/* Add any additional styling as needed */
+
+
+/* Default styles for larger screens */
+/* Add your existing CSS styles here */
+
+@media (max-width: 768px) {
+  /* Styles for screens with a max width of 768px (typical for tablets) */
+  /* Adjust styles for tablet screens */
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens with a max width of 480px (typical for mobile devices) */
+  /* Adjust styles for mobile screens */
+}
+/* Footer Styles */
+footer {
+  background-color: #333; /* Background color for the footer */
+  color: #fff; /* Text color for the footer */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h2 {
+  font-size: 1.5rem; /* Font size for section headings */
+  margin-bottom: 20px;
+  color: #ff5733; /* Heading color */
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #ff5733; /* Link color */
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff; /* Hover color for links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333; /* Background color for the bottom footer */
+}
+
+.footer-bottom a {
+  color: #ff5733; /* Link color for the "Designed by Your Name" part */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #fff; /* Hover color for the "Designed by Your Name" link */
+}
+
+/* Instagram Logo */
+.footer-section img {
+  margin: 0 auto; /* Set horizontal margin to auto to center the image */
+  display: block;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section ul li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* start global */
+* {
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  
+}
+
+.red {
+  background-color: #dc143c;
+  color: #fff;
+  padding: 5px;
+  
+}
+
+/* end global */
+
+.shedule {
+  margin: auto;
+  background-color: #eee;
+  padding: 80px 15px 40px 15px
+  
+}
+
+.shedule .info {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.shedule .info h1 {
+display : inline-block 
+}
+
+.shedule .exercies {
+  min-height: 300px;
+  margin-bottom: 20px;
+  background-color: #ddd;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .3)
+}
+
+.shedule .exercies:hover {
+background-color : rgba(220, 20, 60, .7)
+}
+
+
+.shedule .exercies.active {
+  background-color: #dc143c;
+}
+
+.shedule .exercies .content {
+  padding: 20px;
+  margin: auto;
+  text-align: center
+}
+
+.shedule .exercies .content h3 {
+  background-color: #607D8B;
+  color: #fff;
+  padding: 10px
+}
+
+
+.shedule .exercies .content .image.gym {
+  background: url('IMG_2223.JPG')
+}
+
+.shedule .exercies .content .image.box {
+  background: url('IMG_2228.JPG')
+}
+
+.shedule .exercies .content .image.running {
+  background: url('IMG_2225.JPG')
+}
+
+.shedule .exercies .content .image.yoga {
+  background: url('IMG_2223.JPG')
+}
+
+.shedule .exercies .content .image.gym,
+.shedule .exercies .content .image.box,
+.shedule .exercies .content .image.running,
+.shedule .exercies .content .image.yoga
+{
+  background-position: center;
+  background-size: cover;
+  margin: auto
+}
+
+.shedule .exercies .details {
+  padding: 20px;
+  margin: auto;
+  background-color: #464646;
+  color: #fff
+}
+
+.shedule .exercies .details .time {
+  margin-top: 20px
+}
+/* Styles for the "ABOUT US" section */
+
+
+/* Adjust the following styles as needed for small screens */
+@media (max-width: 768px) {
+  #about-us h1 {
+    font-size: 1.5rem;
+  }
+
+  #about-us p {
+    font-size: 1rem;
+  }
+}
+
+
+
+button#openFormButton,
+button#openFormButton1,
+button#openFormButton2,
+button#openFormButton3,
+button#openFormButton4,
+button#openFormButton5 {
+  background-color: #ff5733; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Show a pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  text-transform: uppercase; /* Convert text to uppercase */
+  transition: background-color 0.3s; /* Add a smooth hover effect */
+  margin: 10px; /* Adjust margin as needed */
+}
+
+/* Hover effect for all "book now" buttons */
+button#openFormButton:hover,
+button#openFormButton1:hover,
+button#openFormButton2:hover,
+button#openFormButton3:hover,
+button#openFormButton4:hover,
+button#openFormButton5:hover {
+  background-color: #e64a2d; /* Change the background color on hover */
+}
+.navbar a:hover {
+  background-color: #000507; /* New background color on hover */
+  color: #fff; /* New text color on hover */
+}

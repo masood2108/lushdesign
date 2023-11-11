@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshops</title>
+  <link rel="stylesheet" href="./work.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <div class="navbar">
+          <a href="index.html">Home</a>
+          <a href="course.html">Courses</a>
+          <a href="chronicles.html">Couture Chronicles</a>
+          <a href="ebook.html">E-Books</a>
+          <a href="work.html">Workshops</a>
+        </div>
+      </nav>
+    </div>
+    <h1>Welcome to Our Workshops</h1>
+  </header>
+  <div id="content">
+	<input type="text" id="workshop-search" placeholder="Search for workshops">
+
+    <div class="workshop-container">
+      <div class="workshop">
+        <img src="Fashion designers eve.jpg" alt="Hand Illustration">
+        <h3>Fashion Design Eve</h3>
+        <p>Learn the art of Fashion Design Eve.</p>
+        <button id="openFormButton1">Book Now</button>
+        <div class="workshop-info">
+          <p>Date: November 18th, 2023</p>
+          <p>Time: Saturday, 4pm onwards</p>
+          <p>Price: 1000/-</p>
+        </div>
+      </div>
+
+      <div class="workshop">
+        <img src="Costume designing .png" alt="Film Costume Design">
+        <h3>Costume Designing</h3>
+        <p>Create iconic costumes for the silver screen.</p>
+        <button id="openFormButton2">Book Now</button>
+        <div class="workshop-info">
+          <p>Date: November 18th, 2023</p>
+          <p>Time: 2pm-4pm</p>
+          <p>Price: 2000/-</p>
+        </div>
+      </div>
+
+	  <div class="workshop">
+		<img src="dig.jpeg" alt="Digital Illustration">
+		<h3>Digital Illustration</h3>
+		<p>Explore digital illustration techniques for fashion.</p>
+        <button id="openFormButton3">Book Now</button>
+		<p>Date: November 20th-25th, 2023</p>
+		<p>Time: 10am-12pm</p>
+		<p>Price: 1200/-</p>
+	</div>
+
+      <div class="workshop">
+        <img src="PRINTING & PAINTING - OFFLINE  - 1.png" alt="Fabric Printing and Painting">
+        <h3>Fabric Printing and Painting</h3>
+        <p>Learn the art of fabric design through printing and painting.</p>
+        <button id="openFormButton4">Book Now</button>
+        <div class="workshop-info">
+          <p>Date: November 19th, 2023</p>
+          <p>Day: Sunday</p>
+          <p>Price: 2000/-</p>
+       
+        </div>
+      </div>
+    </div>
+    <div class="section-separator"></div>
+  </div>
+
+	  <script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const workshopContainer = document.querySelector(".workshop-container");
+		  const searchInput = document.getElementById("workshop-search");
+	  
+		  searchInput.addEventListener("input", function () {
+			const searchValue = searchInput.value.toLowerCase();
+			const workshops = workshopContainer.querySelectorAll(".workshop");
+	  
+			workshops.forEach(function (workshop) {
+			  const title = workshop.querySelector("h3").textContent.toLowerCase();
+			  if (title.includes(searchValue)) {
+				workshop.style.display = "block";
+			  } else {
+				workshop.style.display = "none";
+			  }
+			});
+		  });
+		});
+	  </script>
+	  
+	  <script>
+		let slideIndex = 0;
+		showSlides();
+	
+		function showSlides() {
+			let i;
+			const slides = document.getElementsByClassName("mySlides");
+			
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			
+			slideIndex++;
+			
+			if (slideIndex > slides.length) {
+				slideIndex = 1;
+			}
+			
+			slides[slideIndex - 1].style.display = "block";
+			
+			setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust as needed)
+		}
+	</script>
+	<script>
+		  document.getElementById("openFormButton1").addEventListener("click", function() {
+            // Replace 'YOUR_GOOGLE_FORM_URL' with the URL of your Google Form
+            var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScuu3HNJzpKZvApIembJHOCJQWu-0qT_Xu5idWG213QmwrQZg/viewform?usp=pp_url';
+            window.open(formUrl, '_blank'); // Open the form in a new tab or window
+        });
+	</script>
+		<script>
+			document.getElementById("openFormButton2").addEventListener("click", function() {
+			  // Replace 'YOUR_GOOGLE_FORM_URL' with the URL of your Google Form
+			  var formUrl = 'https://docs.google.com/forms/d/1TvtPVr5e7ICUXOhjGQk7zk_uzeIyMpgs0iNo1jtzTWs/viewform?pli=1&pli=1&edit_requested=true';
+			  window.open(formUrl, '_blank'); // Open the form in a new tab or window
+		  });
+	  </script>
+	  		<script>
+				document.getElementById("openFormButton3").addEventListener("click", function() {
+				  // Replace 'YOUR_GOOGLE_FORM_URL' with the URL of your Google Form
+				  var formUrl = 'https://docs.google.com/forms/d/1TvtPVr5e7ICUXOhjGQk7zk_uzeIyMpgs0iNo1jtzTWs/viewform?pli=1&pli=1&edit_requested=true';
+				  window.open(formUrl, '_blank'); // Open the form in a new tab or window
+			  });
+		  </script>
+		  		<script>
+					document.getElementById("openFormButton4").addEventListener("click", function() {
+					  // Replace 'YOUR_GOOGLE_FORM_URL' with the URL of your Google Form
+					  var formUrl = 'https://docs.google.com/forms/d/1TvtPVr5e7ICUXOhjGQk7zk_uzeIyMpgs0iNo1jtzTWs/viewform?pli=1&pli=1&edit_requested=true';
+					  window.open(formUrl, '_blank'); // Open the form in a new tab or window
+				  });
+			  </script>
+			  
+	  </body>
+	</html>

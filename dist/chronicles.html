@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Couture Chronicles</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Fondamento|Roboto" rel="stylesheet"><link rel="stylesheet" href="./chronicles.css">
+  <header>
+		<nav>
+		  <a href="index.html">Home</a>
+		  <a href="course.html">Courses</a>
+		  <a href="chronicles.html">Couture Chronicles</a>
+		  <a href="ebook.html">E-Books</a>
+		  <a href="work.html">Workshops</a>
+
+		</nav>
+	  </header>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="title">Couture Chronicles</div>
+<p style="text-align: right; font-weight: bold;">@thelushschoolofdesign</p>
+
+<div class="columns">
+  <div>
+		<h1>"COUTURE CHRONICLE"</h1>
+		<p>Step into the enchanting world of high fashion
+      and timeless style with us. "Couture Chronicle" is
+      your passport to the realms of elegance,
+      craftsmanship, and the stories that define the
+      fashion universe.</p>
+		<p>Unveil the secrets behind legendary couturiers,
+      iconic runway moments, and the allure of bespoke
+      masterpieces. We're your guide through the
+      tapestry of fashion history.
+      Join us as we rewind the fashion clock, celebrating
+      the past, exploring the present, and forecasting
+      the future of haute couture.</p>
+		<img src="cou3.jpeg">
+	</div>
+  <div>
+		<h1>The Red Carpet Revolution</h1>
+		<p>The red carpet tradition in Hollywood began in the 1920s. It was initially used for the premiere of the film "Robin Hood" at the Hollywood Egyptian Theatre in 1922.Over the years,it became a symbol of prestige and glamour,welcoming notable figures at film premiers and award ceremonies. The tradition quickly expanded beyond Hollywood and evolved to represent fashion,style,and societal values, making it a global phenomenon</p>
+		<p>Over the decades,red carpet fashion has been significant shifts in style,reflecting the changing times and societal norms.From the elegance of Old Hollywood in the 1950s to the more daring and diverse looks of recent years,it's a reflection. </p>
+		<img src="cou1.jpg">
+	</div>
+	<div>
+		<h1>Met Gala's Reminiscence</h1>
+		<p>The Met Gala, officially known as the Metropolitan
+      Museum of Art Costume Institute Gala, started in 1948. It
+      was founded by publicist Eleanor Lambert. The event was
+      originally a fundraising gala for the newly established
+      Costume Institute at the Metropolitan Museum of Art in
+      New York City. The aim was to raise money for the
+      institute and to generate interest in fashion and costume
+      history.</p>
+		<img src="cou2.jpeg">
+		<p>Over the years, the Met Gala has evolved from a modest
+      fundraising event into one of the most prominent and
+      glamorous fashion gatherings in the world, thanks in part
+      to the involvement of key figures like Anna Wintour. It
+      continues to serve as a major fundraiser for the Costume
+      Institute and an influential platform for celebrating fashion
+      and culture.</p>
+	</div>
+	<div>
+		<h1>THE FASHION ILLUSTRATION RETROSPECTIVE</h1>
+		<p>Fashion illustration has a long history that dates back centuries. It began to gain prominence in the late 18th and 19th centuries when fashion magazines and journals started featuring detailed illustrations of the latest clothing and styles. These illustrations played a crucial role in conveying fashion trends and designs to the public before the widespread use of photography,fashion illustration continued to evolve as an art form and became a more expressive and creative medium,rather than simply a means of representing clothing. It remains an important aspect of the fashion industry today,with artists using various techniques and styles to capture the essence of fashion and style.</p>
+		<img src="cou4.jpeg">
+			
+	</div>
+</div>
+<div class="footer">Couture Chronicles</div>
+<div class="navigation-buttons">
+  <button id="prev-page">Previous Page</button>
+  <button id="next-page">Next Page</button>
+</div>
+<!-- partial -->
+  <!-- Include your JavaScript script -->
+  <script>
+    const pages = document.querySelectorAll('.columns > div');
+    const itemsPerPage = 3;
+    let currentPage = 0;
+  
+    function showPage(pageIndex) {
+      pages.forEach((page, index) => {
+        if (index >= pageIndex * itemsPerPage && index < (pageIndex + 1) * itemsPerPage) {
+          page.style.display = 'block';
+        } else {
+          page.style.display = 'none';
+        }
+      });
+    }
+  
+    function updateButtons() {
+      document.getElementById('prev-page').disabled = currentPage === 0;
+      document.getElementById('next-page').disabled = currentPage >= Math.ceil(pages.length / itemsPerPage) - 1;
+    }
+  
+    document.getElementById('next-page').addEventListener('click', () => {
+      if (currentPage < Math.ceil(pages.length / itemsPerPage) - 1) {
+        currentPage++;
+        showPage(currentPage);
+        updateButtons();
+      }
+    });
+  
+    document.getElementById('prev-page').addEventListener('click', () => {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+        updateButtons();
+      }
+    });
+  
+    showPage(currentPage);
+    updateButtons();
+  </script>
+</body>
+</html>

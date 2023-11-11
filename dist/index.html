@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+
+  <title>Website</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <style>
+    /* Add this CSS to your stylesheet */
+
+/* Add this CSS to your stylesheet */
+
+/* Style for the logo image */
+/* Style for the logo */
+/* Style for the logo */
+/* Style for the logo */
+.logo-link {
+  display: inline-block; /* Make the logo a clickable link */
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logo-link img {
+  width: 150px; /* Increase the width to your desired size */
+  height: 150px; /* Increase the height to match the new width */
+  /* Add any additional styles if needed, such as padding, border, or background color */
+}
+
+
+
+  </style>
+<!-- partial:index.partial.html -->
+<video poster="" playsinline autoplay muted loop>
+<source src="videohand.webm" type="video/webm">
+<source src="videohand.mp4" type="video/mp4">
+</video>
+<header>
+  <a href="index.html" class="logo-link">
+    <img src="1) Grey Transparent (1).png" alt="Website Logo">
+  </a>
+
+  <nav class ="navbar">
+    <a href="index.html">Home</a>
+    <a href="course.html">Courses</a>
+    <a href="chronicles.html">Couture Chronicles</a>
+    <a href="ebook.html">E-Books</a>
+    <a href="work.html">Workshops</a>
+  </nav>
+</header>
+<div id="fashion">
+</div>
+<div>
+  <div class="section-separator"></div>
+<div id="workhrad">
+  <h1> November-Workshops</h1>
+</div>
+<div id="content">
+    <div class="workshop-container">
+    <div class="workshop">
+      <img src="Fashion designers eve.jpg" alt="Hand Illustration">
+      <h3>Fashion Design Eve</h3>
+      <a href="work.html" class="read-more">Book Now</a>
+    </div>
+    <div class="workshop">
+      <img src="dig.jpeg" alt="Digital Illustration">
+      <h3>Digital Illustration</h3>
+      <a href="digital_illustration.html" class="read-more">Book Now</a>
+    </div>
+
+
+    <div class="workshop">
+      <img src="Costume designing .png" alt="Film Costume Design">
+      <h3>Film Costume Design</h3>
+      <a href="work.html" class="read-more">Book Now</a>
+    </div>
+
+    <div class="workshop">
+      <img src="PRINTING & PAINTING - OFFLINE  - 1.png" alt="Fabric Printing and Painting">
+      <h3>Fabric Printing and Painting</h3>
+      <a href="work.html" class="read-more">Book Now</a>
+    </div>
+  </div>
+  <div id="more-workshops">
+    <a href="work.html" class="more-workshops-button">More Workshops</a>
+  </div>
+  <div class="section-separator"></div>
+<div id="about-us">
+  <h1>ABOUT US</h1>
+</div>
+<div>
+<p>
+  The Lush School of Design's workshops aim to provide accessible, hands-on learning experiences, focusing on empowering creativity, practical skill enhancement, and inclusivity. They encourage innovation and the formation of a design community, striving to empower individuals to play a pivotal role in creating a more beautiful and sustainable world through creativity and leadership.
+  </p>
+</div>
+</div>
+<div class="section-separator"></div>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section contact">
+      <h2 >Contact Us</h2>
+      <ul>
+        <li><i class="fa fa-map-marker"></i>Jubilee Hills</li>
+      </ul>
+    </div>
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="course.html">Courses</a></li>
+        <li><a href="chronicles.html">Couture Chronicles</a></li>
+        <li><a href="ebook.html">E-Books</a></li>
+      </ul>
+    </div>
+    <div class="footer-section social">
+      <h2>Follow Us</h2>
+      <a href="https://instagram.com/thelushschoolofdesign?igshid=NGVhN2U2NjQ0Yg==" target="_blank" rel="noopener">
+        <img src="instagram.png" alt="Instagram Logo" width="30" height="30">
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; The Lush School of Design
+  </div>
+</footer>
+<script>
+  window.addEventListener("scroll", function() {
+    const workshopHeader = document.getElementById("workshop-header");
+    if (window.scrollY > 200) { // Adjust the scroll position to your preference
+      workshopHeader.classList.remove("hidden");
+    } else {
+      workshopHeader.classList.add("hidden");
+    }
+  });
+  document.getElementById("openFormButton").addEventListener("click", function() {
+            // Replace 'YOUR_GOOGLE_FORM_URL' with the URL of your Google Form
+            var formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScWy-4xb7yBNik5HfEUJqL3cCdeo42TmQnWec-4Yw7K0KCt5A/viewform?usp=sf_link';
+            window.open(formUrl, '_blank'); // Open the form in a new tab or window
+        });
+        var time = new Date(),
+    today = time.getDay(),
+    trainingDay,
+    info = document.querySelector('.info h1');
+switch (today) {
+
+//case 0:
+//    var ele = document.querySelector('#' + trainingDay),
+//        span = document.querySelector('#' + trainingDay + ' .date span');
+//    ele.className += ' active';
+//    span.className += ' red';
+//      info.className += ' red';
+//    break;
+
+case 1:
+    trainingDay = 'Mon';
+    var ele = document.querySelector('#' + trainingDay),
+        span = document.querySelector('#' + trainingDay + ' .date span');
+    ele.className += ' active';
+    span.className += ' red';
+    info.className += ' red';
+    break;
+       
+case 2:
+    trainingDay = 'Tue';
+    var ele = document.querySelector('#' + trainingDay),
+        span = document.querySelector('#' + trainingDay + ' .date span');
+    ele.className += ' active';
+    span.className += ' red';
+    info.className += ' red';
+    break;
+       
+case 3:
+    trainingDay = 'Wed';
+    var ele = document.querySelector('#' + trainingDay),
+        span = document.querySelector('#' + trainingDay + ' .date span');
+    ele.className += ' active';
+    span.className += ' red';
+    info.className += ' red';
+    break;
+       
+//case 4:
+//    trainingDay = 'Tues';
+//    var ele = document.querySelector('#' + trainingDay),
+//        span = document.querySelector('#' + trainingDay + ' .date span');
+//    ele.className += ' active';
+//    span.className += ' red';
+//    break;
+       
+case 5:
+    trainingDay = 'Fri';
+    var ele = document.querySelector('#' + trainingDay),
+        span = document.querySelector('#' + trainingDay + ' .date span');
+    ele.className += ' active';
+    span.className += ' red';
+    info.className += ' red';
+    break;
+       
+// case 6:
+//     trainingDay = 'Sat';
+//     var ele = document.querySelector('#' + trainingDay),
+//         span = document.querySelector('#' + trainingDay + ' .date span');
+//     ele.className += ' active';
+//     span.className += ' red';
+//     info.className += ' red';
+//     break;
+        
+default:
+    info.textContent = 'have a rest';
+
+}
+</script>
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('header');
+    
+    if (window.scrollY > 0) {
+        header.style.display = 'none';
+    } else {
+        header.style.display = 'block';
+    }
+});
+
+</script>
+</div>
+</body>
+</html>
